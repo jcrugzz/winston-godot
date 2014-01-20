@@ -43,6 +43,8 @@ Godot.prototype.name = 'godot';
 winston.transports.Godot = Godot;
 
 Godot.prototype.log = function (level, msg, meta, callback) {
+  var self = this;
+
   if (this.silent) {
     return callback(null, true);
   }
