@@ -68,6 +68,6 @@ Godot.prototype.log = function (level, msg, meta, callback) {
   }
 
   this.godot.produce(packet);
-  logged();
+  setImmediate(logged);
 }
 
