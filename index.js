@@ -31,7 +31,6 @@ var Godot = module.exports = function (options) {
     return acc;
   }, {});
 
-
 };
 
 module.exports.Godot = Godot;
@@ -59,6 +58,7 @@ Godot.prototype.log = function (level, msg, meta, callback) {
 
   var message = winston.clone(meta);
   message.level = level;
+  packet.state = level === 'error' ? level : 'ok';
   packet.description = msg;
   packet.meta = message;
 
