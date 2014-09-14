@@ -20,6 +20,7 @@ var Godot = module.exports = function (options) {
     throw new Error('You must pass in an instance of a godot client')
   }
 
+  this.name = 'godot';
   this.godot = options.godot;
   //
   // TODO: Support more of these godot properties
