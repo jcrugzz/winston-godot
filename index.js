@@ -16,7 +16,7 @@ var Godot = module.exports = function (options) {
   // Remark: this must be an intance of a godot client
   //
   winston.Transport.call(this, options);
-  if (!options.godot || !(options.godot instanceof Client)) {
+  if (!options.godot || !(typeof options.godot.produce !== 'function')) {
     throw new Error('You must pass in an instance of a godot client')
   }
 
