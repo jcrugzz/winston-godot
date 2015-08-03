@@ -14,7 +14,7 @@
     "node": "0.10.x"
   },
   "peerDependencies": {
-    "winston": "0.x.x",
+    "winston": "^1.0.0",
     "godot": "~0.7.5"
   },
   "devDependencies": {
